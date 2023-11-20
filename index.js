@@ -101,13 +101,7 @@ document.getElementById("btt").addEventListener("click", function(){
     
         btt.addEventListener("click",function(){
             cont++
-            if(cont === 9 && win != 1){
-                section.removeChild(jogada)
-                label.innerText="Jogo Finalizado\n\n"+"Empate técnico"
-                section.appendChild(button)
-                reinicar()
-
-            }
+          
             if(jogador==="O"){
                 btt.innerText="O"
                 btt.disabled=true
@@ -292,6 +286,13 @@ document.getElementById("btt").addEventListener("click", function(){
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player1+", você ganhou!"
                 win=1
                 reinicar()
+            }
+            if(cont === 9 && win != 1){
+                section.removeChild(jogada)
+                label.innerText="Jogo Finalizado\n\n"+"Empate técnico"
+                section.appendChild(button)
+                reinicar()
+
             }
             
         })
