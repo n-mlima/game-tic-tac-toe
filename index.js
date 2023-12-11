@@ -57,10 +57,12 @@ document.getElementById("btt").addEventListener("click", function(){
             
         })
         button2.addEventListener("click", function(){
+            cont=0
+            win=0
             resetText()
             resetStyle()
             resetBotoes("auto")
-            label.innerText=""
+            label.innerText="Jogo Iniciado"
             section.appendChild(jogada)
             button.remove()
             button2.remove()
