@@ -17,8 +17,9 @@ section{
     color:white;
 }
 #imagem{
-    width: 150px;
-    height: 150px;
+    margin-top: 3rem;
+    width: 250px;
+    object-fit: fill;
 }
 .btt_grid{
     border: none;
