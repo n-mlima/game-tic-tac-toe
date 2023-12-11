@@ -79,3 +79,18 @@ section{
 .start{
     background-color: white;
 }
+#footer{
+    display: flex;
+    flex-direction: column;
+    box-shadow:  0 0rem 0.5rem rgb(242, 242, 247);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    gap: 1rem;
+    width: 100%;
+}
+.rodape{
+    padding-right: 1rem;
+}
