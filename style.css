@@ -56,7 +56,7 @@ section{
     
 }
 #container_2{
-    padding-top:4rem;
+    margin-top:2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
