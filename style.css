@@ -35,7 +35,11 @@ section{
     cursor: pointer;
     
 }
-#btt, #btt2:hover{
+#btt:hover{
+    background-color: gray;
+    color: black;
+}
+#btt2:hover{
     background-color: gray;
     color: black;
 }
