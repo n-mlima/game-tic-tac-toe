@@ -365,6 +365,3 @@ document.getElementById("btt").addEventListener("click", function(){
 
     
     
-
-
-})
