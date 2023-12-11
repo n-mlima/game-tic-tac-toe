@@ -7,27 +7,67 @@ const sec= document.getElementById("sec")
 
 document.getElementById("btt").addEventListener("click", function(){
 
-    function statusBotoes(x){
-        btt1.disabled=x
-        btt2.disabled=x
-        btt3.disabled=x
-        btt4.disabled=x
-        btt5.disabled=x
-        btt6.disabled=x
-        btt7.disabled=x
-        btt8.disabled=x
-        btt9.disabled=x
+    function resetBotoes(value){
+
+        btt1.style.pointerEvents = value
+        btt2.style.pointerEvents = value
+        btt3.style.pointerEvents = value
+        btt4.style.pointerEvents = value
+        btt5.style.pointerEvents = value
+        btt6.style.pointerEvents = value
+        btt7.style.pointerEvents = value
+        btt8.style.pointerEvents = value
+        btt9.style.pointerEvents = value
     
     }
+
+    function resetText(){
+
+        btt1.innerText=""
+        btt2.innerText=""
+        btt3.innerText=""
+        btt4.innerText=""
+        btt5.innerText=""
+        btt6.innerText=""
+        btt7.innerText=""
+        btt8.innerText=""
+        btt9.innerText=""
+
     
+    }
+    function resetStyle(){
+       
+        btt1.style.backgroundColor=""
+        btt2.style.backgroundColor=""
+        btt3.style.backgroundColor=""
+        btt4.style.backgroundColor=""
+        btt5.style.backgroundColor=""
+        btt6.style.backgroundColor=""
+        btt7.style.backgroundColor=""
+        btt8.style.backgroundColor=""
+        btt9.style.backgroundColor=""
+
+    
+    }
     function reinicar(){
-        statusBotoes(true)
         section.appendChild(button)
+        section.appendChild(button2)
         button.addEventListener("click", function(){
             location.reload()
             
         })
+        button2.addEventListener("click", function(){
+            resetText()
+            resetStyle()
+            resetBotoes("auto")
+            label.innerText=""
+            section.appendChild(jogada)
+            button.remove()
+            button2.remove()
+
+        })
     }
+    
 
  
     const player1= document.getElementById("player1").value
@@ -94,8 +134,11 @@ document.getElementById("btt").addEventListener("click", function(){
     let cont=0
     let win=0
     const button=document.createElement("button")
-    button.innerText="Jogar Novamente"
+    button.innerText="Novo Jogo"
     button.id="btt"
+    const button2=document.createElement("button")
+    button2.innerText="Jogar Novamente "
+    button2.id="btt2"
 
     document.querySelectorAll(".btt_grid").forEach(function(btt){
     
@@ -104,13 +147,14 @@ document.getElementById("btt").addEventListener("click", function(){
           
             if(jogador==="O"){
                 btt.innerText="O"
-                btt.disabled=true
+               // btt.disabled=true
+               btt.style.pointerEvents = 'none';
                 
                 jogador="X"
                 jogada.innerText=player1+" faça sua jogada"   
             }else{
                 btt.innerText="X"
-                btt.disabled=true
+                btt.style.pointerEvents = 'none';
                 
                 jogador="O"
                 jogada.innerText=player2+" faça sua jogada"   
@@ -124,8 +168,8 @@ document.getElementById("btt").addEventListener("click", function(){
                 section.removeChild(jogada)
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player2+", você ganhou!"
                 win=1
+                resetBotoes("none")
                 
-                section.appendChild(button)
                 reinicar()
                 
             }
@@ -137,6 +181,7 @@ document.getElementById("btt").addEventListener("click", function(){
                 section.removeChild(jogada)
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player2+", você ganhou!"
                 win=1
+                resetBotoes("none")
                 reinicar()
             }
             if(btt7.innerText==="O" && btt8.innerText==="O" && btt9.innerText==="O" ){
@@ -147,6 +192,7 @@ document.getElementById("btt").addEventListener("click", function(){
                 section.removeChild(jogada)
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player2+", você ganhou!"
                 win=1
+                resetBotoes("none")
                 reinicar()
             }
             if(btt3.innerText==="O" && btt5.innerText==="O" && btt7.innerText==="O" ){
@@ -157,6 +203,7 @@ document.getElementById("btt").addEventListener("click", function(){
                 section.removeChild(jogada)
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player2+", você ganhou!"
                 win=1
+                resetBotoes("none")
                 reinicar()
             }
             if(btt1.innerText==="O" && btt5.innerText==="O" && btt9.innerText==="O" ){
@@ -167,6 +214,7 @@ document.getElementById("btt").addEventListener("click", function(){
                 section.removeChild(jogada)
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player2+", você ganhou!"
                 win=1
+                resetBotoes("none")
                 reinicar()
             }
 
@@ -178,6 +226,7 @@ document.getElementById("btt").addEventListener("click", function(){
                 section.removeChild(jogada)
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player2+", você ganhou!"
                 win=1
+                resetBotoes("none")
                 reinicar()
             }
 
@@ -189,6 +238,7 @@ document.getElementById("btt").addEventListener("click", function(){
                 section.removeChild(jogada)
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player2+", você ganhou!"
                 win=1
+                resetBotoes("none")
                 reinicar()
             }
             if(btt3.innerText==="O" && btt6.innerText==="O" && btt9.innerText==="O" ){
@@ -199,6 +249,7 @@ document.getElementById("btt").addEventListener("click", function(){
                 section.removeChild(jogada)
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player2+", você ganhou!"
                 win=1
+                resetBotoes("none")
                 reinicar()
             }
 
@@ -210,6 +261,7 @@ document.getElementById("btt").addEventListener("click", function(){
                 section.removeChild(jogada)
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player1+", você ganhou!"
                 win=1
+                resetBotoes("none")
                 reinicar()
 
                 
@@ -223,6 +275,7 @@ document.getElementById("btt").addEventListener("click", function(){
                 section.removeChild(jogada)
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player1+", você ganhou!"
                 win=1
+                resetBotoes("none")
                 reinicar()
             }
             if(btt7.innerText==="X" && btt8.innerText==="X" && btt9.innerText==="X" ){
@@ -233,6 +286,7 @@ document.getElementById("btt").addEventListener("click", function(){
                 section.removeChild(jogada)
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player1+", você ganhou!"
                 win=1
+                resetBotoes("none")
                 reinicar()
             }
             if(btt3.innerText==="X" && btt5.innerText==="X" && btt7.innerText==="X" ){
@@ -243,6 +297,7 @@ document.getElementById("btt").addEventListener("click", function(){
                 section.removeChild(jogada)
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player1+", você ganhou!"
                 win=1
+                resetBotoes("none")
                 reinicar()
             }
             if(btt1.innerText==="X" && btt5.innerText==="X" && btt9.innerText==="X" ){
@@ -253,6 +308,7 @@ document.getElementById("btt").addEventListener("click", function(){
                 section.removeChild(jogada)
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player1+", você ganhou!"
                 win=1
+                resetBotoes("none")
                 reinicar()
             }
 
@@ -264,6 +320,7 @@ document.getElementById("btt").addEventListener("click", function(){
                 section.removeChild(jogada)
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player1+", você ganhou!"
                 win=1
+                resetBotoes("none")
                 reinicar()
             }
 
@@ -275,6 +332,7 @@ document.getElementById("btt").addEventListener("click", function(){
                 section.removeChild(jogada)
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player1+", você ganhou!"
                 win=1
+                resetBotoes("none")
                 reinicar()
             }
             if(btt3.innerText==="X" && btt6.innerText==="X" && btt9.innerText==="X" ){
@@ -285,6 +343,7 @@ document.getElementById("btt").addEventListener("click", function(){
                 section.removeChild(jogada)
                 label.innerText="Jogo Finalizado\n\n"+"Parabéns "+player1+", você ganhou!"
                 win=1
+                resetBotoes("none")
                 reinicar()
             }
             if(cont === 9 && win != 1){
@@ -298,6 +357,12 @@ document.getElementById("btt").addEventListener("click", function(){
         })
         
     })
+    
+    
+
+
+})
+
     
     
 
