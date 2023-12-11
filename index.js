@@ -124,11 +124,13 @@ document.getElementById("btt").addEventListener("click", function(){
     section.appendChild(div)
     const label=document.createElement("h2")
     label.innerText="Jogo Iniciado"
+    label.className="player"
     section.appendChild(label)
     
     section.appendChild(document.createElement("br"))
     const jogada=document.createElement("label")
     jogada.innerText=player1+" faça sua jogada"
+    jogada.className="player"
     let jogador="X"
     section.appendChild(jogada)
     let cont=0
