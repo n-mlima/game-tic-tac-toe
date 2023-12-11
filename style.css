@@ -1,7 +1,7 @@
 body{
     display: flex;
     flex-direction: column;
-    background-color: rgba(57, 57, 107, 0.158);
+    background-color: black;
     justify-content: center;
     align-items: center;
     
@@ -12,6 +12,9 @@ section{
     border: 2px black solid;
    
    
+}
+.player{
+    color:white;
 }
 #imagem{
     width: 150px;
