@@ -80,6 +80,7 @@ section{
     background-color: white;
 }
 #footer{
+    font-size:10px;
     display: flex;
     flex-direction: column;
     box-shadow:  0 0rem 0.5rem rgb(242, 242, 247);
