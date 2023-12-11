@@ -79,6 +79,9 @@ section{
 .start{
     background-color: white;
 }
+#titulo{
+    color:white;
+    margin-bottom:0;
 #footer{
     font-size:10px;
     display: flex;
@@ -91,7 +94,7 @@ section{
     bottom: 0;
     gap:0.5rem;
     width: 100%;
-    margin-top:5rem;
+    
 }
 .rodape{
     padding-right: 1rem;
